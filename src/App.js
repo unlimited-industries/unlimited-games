@@ -3,6 +3,8 @@ import './index.css';
 import TerrainGenerator from './components/TerrainGenerator';
 import {Section, Slide, LeftPane, RightPane} from './components/Section'
 import Header from './components/Header'
+import Footer from './components/Footer';
+
 function App() {
   const [activeSlides, setActiveSlide] = useState([0, 0]);
 
@@ -111,6 +113,7 @@ function App() {
           <RightPane>{slides[1][activeSlides[1]].rightContent}</RightPane>
         </Slide>
       </Section>
+      <Footer/>
     </div>
   );
 }
