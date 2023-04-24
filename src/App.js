@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './index.css';
 import TerrainGenerator from './components/TerrainGenerator';
 import {Section, Slide, LeftPane, RightPane} from './components/Section'
-
+import Header from './components/Header'
 function App() {
   const [activeSlides, setActiveSlide] = useState([0, 0]);
 
@@ -85,10 +85,8 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="h-[80vh] flex justify-center items-center" style={{backgroundImage: `url(header.jpeg)`}}>
-        <h1 className="text-white text-9xl">Unlimited</h1>
-        </div>
+    <div className="App overflow-x-hidden">
+      <Header backgroundImage="header.jpeg" />
       <Section
         bgImage="procedural_generation.jpg"
         activeSlide={activeSlides[0]}
