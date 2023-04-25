@@ -10,7 +10,7 @@ const Footer = () => {
     >
       <div className="container mx-auto flex items-center justify-center">
         <a
-          href="https://telegram.org/"
+          href="https://t.me/altcoding"
           target="_blank"
           rel="noreferrer"
           className="mx-8 transform hover:scale-105 transition-transform duration-200"
@@ -23,7 +23,7 @@ const Footer = () => {
           />
         </a>
         <a
-          href="https://github.com/"
+          href="https://github.com/saralinov-r-auca-2022"
           target="_blank"
           rel="noreferrer"
           className="mx-8 transform hover:scale-105 transition-transform duration-200"
