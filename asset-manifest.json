@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/unlimited-gamedev/static/css/main.1aebb2b9.css",
+    "main.js": "/unlimited-gamedev/static/js/main.8d8097b3.js",
+    "index.html": "/unlimited-gamedev/index.html",
+    "main.1aebb2b9.css.map": "/unlimited-gamedev/static/css/main.1aebb2b9.css.map",
+    "main.8d8097b3.js.map": "/unlimited-gamedev/static/js/main.8d8097b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aebb2b9.css",
+    "static/js/main.8d8097b3.js"
+  ]
+}
