@@ -4,7 +4,14 @@ import TerrainGenerator from "./components/TerrainGenerator";
 import { Section, Slide, LeftPane, RightPane } from "./components/Section";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HermitInterpolation from "./components/formulas/Interpolation";
+import {
+  HermitInterpolation,
+  CosineInterpolation,
+  CubicInterpolation,
+  SplineInterpolation,
+} from "./components/formulas/Interpolation";
+import { InlineMath } from "react-katex";
+import { FourierTransform } from "./components/formulas/fourier_transform";
 
 function App() {
   const [activeSlides, setActiveSlide] = useState([0, 0]);
@@ -35,18 +42,47 @@ function App() {
       {
         leftContent: (
           <>
-            <p className="text-white">
+            <p className="text-white text-base">
               For more flexible customization of procedural generation,
               interpolations can be used. In the mathematical field of numerical
               analysis, interpolation is a type of estimation, a method of
               constructing (finding) new data points based on the range of a
-              discrete set of known data points. This is used to smooth Perlin noise values.
+              discrete set of known data points. This is used to smooth Perlin
+              noise values.
+              <br />
+              <br />
+              <p className="text-xl">
+                Interpolation types:
+                <br />
+                <ol className="list-decimal ml-6 mt-2">
+                  <li>Hermit Interpolation</li>
+                  <li>Cosine interpolation</li>
+                  <li>Cubic interpolation</li>
+                  <li>Spline interpolation</li>
+                  <li>RBF interpolation</li>
+                </ol>
+              </p>
             </p>
           </>
         ),
         rightContent: (
-          <div className="bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80 py-16">
+          <div className="bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80 py-16 pl-6">
+            <InlineMath>{"1)"}</InlineMath>
             <HermitInterpolation />
+            <br />
+            <br />
+            <InlineMath>{"2)"}</InlineMath>
+            <CosineInterpolation />
+            <br />
+            <br />
+            <InlineMath>{"3)"}</InlineMath>
+            <CubicInterpolation />
+            <br />
+            <br />
+            <div className="text-xs">
+              <InlineMath>{"4)"}</InlineMath>
+              <SplineInterpolation></SplineInterpolation>
+            </div>
           </div>
         ),
       },
@@ -57,18 +93,56 @@ function App() {
         rightContent: (
           <div className="backdrop-blur-sm rounded-3xl p-3">
             <p className="text-white text-2xl ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              The Fourier Transform gives you even more flexibility in
+              customizing procedural generation to add individual structures and
+              terrain patches.
+              <br />
+              <br />
+              <h2>Algorithm:</h2>
+              <ul className="list-decimal text-base pl-2 pt-2">
+                <li>
+                  Creating random noise: First, an image with random noise is
+                  created.
+                </li>
+                <li>
+                  Applying the Fourier transform: This results in a set of
+                  complex numbers representing the amplitudes and phases of
+                  various frequency components.
+                </li>
+                <li>
+                  Modifying the spectrum: This allows for the creation of
+                  textures with specific structures or patterns.
+                </li>
+                <li>
+                  Inverse Fourier transform: After modifying the spectrum, the
+                  inverse Fourier transform is applied to return to the image in
+                  the spatial domain.
+                </li>
+              </ul>
             </p>
           </div>
         ),
       },
-    ],
+      {
+        leftContent: (
+          <div className="backdrop-blur-sm rounded-3xl">
+            <p className="text-white text-xl">
+              Fourier Transform is a mathematical model which helps to transform
+              the signals between two different domains, such as transforming
+              signal from frequency domain to time domain or vice versa.
+            </p>
+          </div>
+        ),
+        rightContent: (
+          <div className="container mx-auto flex flex-col items-center">
+            <img className="w-2/3 h-auto mb-4" src="fourier_transform(2).png" alt="Fourier Transform 2"></img>
+            <div className="bg-black bg-opacity-60 w-5/6 h-1/5 text-white text-opacity-80 py-3">
+              <FourierTransform />
+            </div>
+          </div>
+        )
+      }
+    ]
   ];
 
   const prevSlide = (section) => {
