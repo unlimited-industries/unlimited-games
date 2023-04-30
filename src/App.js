@@ -149,7 +149,7 @@ function App() {
     return () => {
       setActiveSlide((prev) => {
         const prevIndex =
-          (prev[0] - 1 + slides[section].length) % slides[section].length;
+          (prev[section] - 1 + slides[section].length) % slides[section].length;
         const newSlides = prev.slice();
         newSlides[section] = prevIndex;
         return newSlides;
