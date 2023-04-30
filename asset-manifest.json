@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/unlimited-gamedev/static/css/main.484b675a.css",
-    "main.js": "/unlimited-gamedev/static/js/main.cd4429ab.js",
+    "main.css": "/unlimited-gamedev/static/css/main.8e8b4cc3.css",
+    "main.js": "/unlimited-gamedev/static/js/main.63f10da5.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/unlimited-gamedev/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/unlimited-gamedev/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
     "static/media/KaTeX_Main-Bold.ttf": "/unlimited-gamedev/static/media/KaTeX_Main-Bold.8169508bf58f8bd92ad8.ttf",
@@ -63,11 +63,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/unlimited-gamedev/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/unlimited-gamedev/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/unlimited-gamedev/index.html",
-    "main.484b675a.css.map": "/unlimited-gamedev/static/css/main.484b675a.css.map",
-    "main.cd4429ab.js.map": "/unlimited-gamedev/static/js/main.cd4429ab.js.map"
+    "main.8e8b4cc3.css.map": "/unlimited-gamedev/static/css/main.8e8b4cc3.css.map",
+    "main.63f10da5.js.map": "/unlimited-gamedev/static/js/main.63f10da5.js.map"
   },
   "entrypoints": [
-    "static/css/main.484b675a.css",
-    "static/js/main.cd4429ab.js"
+    "static/css/main.8e8b4cc3.css",
+    "static/js/main.63f10da5.js"
   ]
 }
