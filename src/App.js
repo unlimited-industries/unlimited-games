@@ -259,7 +259,7 @@ function App() {
           <p className="text-white w-3/5 ml-44 text-sm">
             {`The difficulty arises in how to make
             feedback between the AI outputs and the original equations. First
-            you need to determine the requirements for the game to be balanced:
+            step - is to determine the requirements for the game to be balanced:
             1) The ability to play for any faction so that equal players get a
             draw regardless of the chosen strategy. 2) Maintaining balance
             throughout the entire gaming session. To be able to develop at the
