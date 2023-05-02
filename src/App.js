@@ -16,7 +16,7 @@ import { NavierStokes } from "./components/formulas/NavierStokes";
 import { SecondSpecialLimit } from "./components/formulas/SecondSpecialLimit";
 
 function App() {
-  const [activeSlides, setActiveSlide] = useState([0, 0, 0, 0, 0]);
+  const [activeSlides, setActiveSlide] = useState([0, 1, 0, 0, 0]);
 
   const slides = [
     [
