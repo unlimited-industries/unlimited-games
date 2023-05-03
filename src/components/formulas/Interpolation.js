@@ -1,6 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import "katex/dist/katex.min.css";
+import "./Interpolation.css";
 import { InlineMath } from "react-katex";
+
+const InterpolationFormulas = () => {
+  const [isSpareImageVisible, setIsSpareImageVisible] = useState(false);
+
+  const handleClick = () => {
+    console.log("alsdkjf");
+    setIsSpareImageVisible(!isSpareImageVisible);
+  };
+
+  return (
+    <div className="relative bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80">
+      <button
+        onClick={handleClick}
+        className="absolute bottom-0 right-0 bg-gray-400 bg-opacity-10 text-xl p-1 hover:bg-opacity-100 transition-opacity"
+      >
+        🔧
+      </button>
+      {!isSpareImageVisible ? (
+        <div className="py-16 pl-6">
+          <div className="formula">
+            <InlineMath>{"1)"}</InlineMath>
+            <HermitInterpolation />
+          </div>
+          <br />
+          <div className="formula">
+            <InlineMath>{"2)"}</InlineMath>
+            <CosineInterpolation />
+          </div>
+          <br />
+          <div className="formula">
+            <InlineMath>{"3)"}</InlineMath>
+            <CubicInterpolation />
+          </div>
+          <br />
+          <div className="spline-formula">
+            <InlineMath>{"4)"}</InlineMath>
+            <SplineInterpolation />
+          </div>
+        </div>
+      ) : (
+        <div className="pt-6 py-1">
+          <img src="formulas_alternative.png" alt="Formulas Alternative"></img>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const HermitInterpolation = () => {
   const formula =
@@ -60,11 +108,17 @@ const SplineInterpolation = () => {
   return (
     <>
       <InlineMath>{formula}</InlineMath>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <InlineMath>{coefficients}</InlineMath>
     </>
   );
 };
 
-export { HermitInterpolation, CosineInterpolation, CubicInterpolation, SplineInterpolation };
+export {
+  HermitInterpolation,
+  CosineInterpolation,
+  CubicInterpolation,
+  SplineInterpolation,
+  InterpolationFormulas,
+};
