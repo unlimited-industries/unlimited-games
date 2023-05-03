@@ -1,0 +1,9 @@
+.formula {
+    font-size: calc(1vw + 0.1rem);
+    width: 100%;
+  }
+
+  .spline-formula {
+    font-size: calc(0.7vw + 0.1rem);
+  }
+  
