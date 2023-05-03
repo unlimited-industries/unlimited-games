@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import "./index.css";
-import "./components/formulas/Interpolation.css"
+import "./components/formulas/Interpolation.css";
 import TerrainGenerator from "./components/TerrainGenerator";
 import { Section, Slide, LeftPane, RightPane } from "./components/Section";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import {
-  HermitInterpolation,
-  CosineInterpolation,
-  CubicInterpolation,
-  SplineInterpolation,
-} from "./components/formulas/Interpolation";
-import { InlineMath } from "react-katex";
+import { InterpolationFormulas } from "./components/formulas/Interpolation";
 import { FourierTransform } from "./components/formulas/FourierTransform";
 import { NavierStokes } from "./components/formulas/NavierStokes";
 import { SecondSpecialLimit } from "./components/formulas/SecondSpecialLimit";
@@ -68,29 +62,7 @@ function App() {
             </p>
           </>
         ),
-        rightContent: (
-          <div className="bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80 py-16 pl-6">
-            <div className="formula">
-              <InlineMath>{"1)"}</InlineMath>
-              <HermitInterpolation />
-            </div>
-            <br />
-            <div className="formula">
-              <InlineMath>{"2)"}</InlineMath>
-              <CosineInterpolation />
-            </div>
-            <br />
-            <div className="formula">
-              <InlineMath>{"3)"}</InlineMath>
-              <CubicInterpolation />
-            </div>
-            <br />
-            <div className="spline-formula">
-              <InlineMath>{"4)"}</InlineMath>
-              <SplineInterpolation />
-            </div>
-          </div>
-        ),
+        rightContent: <InterpolationFormulas />,
       },
     ],
     [
