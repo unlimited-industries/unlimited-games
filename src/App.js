@@ -68,7 +68,7 @@ function App() {
           </>
         ),
         rightContent: (
-          <div className="bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80 py-16 pl-6 md:text-base lg:text-lg xl:text-xl">
+          <div className="bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80 py-16 pl-6 md:text-sm lg:text-base xl:text-lg">
             <InlineMath>{"1)"}</InlineMath>
             <HermitInterpolation />
             <br />
