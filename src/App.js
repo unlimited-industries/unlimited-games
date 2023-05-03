@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
+import "./components/formulas/Interpolation.css"
 import TerrainGenerator from "./components/TerrainGenerator";
 import { Section, Slide, LeftPane, RightPane } from "./components/Section";
 import Header from "./components/Header";
@@ -68,20 +69,23 @@ function App() {
           </>
         ),
         rightContent: (
-          <div className="bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80 py-16 pl-6 md:text-sm lg:text-base xl:text-lg">
-            <InlineMath>{"1)"}</InlineMath>
-            <HermitInterpolation />
+          <div className="bg-black bg-opacity-60 w-5/6 h-full text-white text-opacity-80 py-16 pl-6">
+            <div className="formula">
+              <InlineMath>{"1)"}</InlineMath>
+              <HermitInterpolation />
+            </div>
             <br />
+            <div className="formula">
+              <InlineMath>{"2)"}</InlineMath>
+              <CosineInterpolation />
+            </div>
             <br />
-            <InlineMath>{"2)"}</InlineMath>
-            <CosineInterpolation />
+            <div className="formula">
+              <InlineMath>{"3)"}</InlineMath>
+              <CubicInterpolation />
+            </div>
             <br />
-            <br />
-            <InlineMath>{"3)"}</InlineMath>
-            <CubicInterpolation />
-            <br />
-            <br />
-            <div className="text-xs xl:text-sm">
+            <div className="spline-formula">
               <InlineMath>{"4)"}</InlineMath>
               <SplineInterpolation />
             </div>
