@@ -81,9 +81,9 @@ function App() {
             <CubicInterpolation />
             <br />
             <br />
-            <div className="text-xs">
+            <div className="text-xs xl:text-sm">
               <InlineMath>{"4)"}</InlineMath>
-              <SplineInterpolation></SplineInterpolation>
+              <SplineInterpolation />
             </div>
           </div>
         ),
