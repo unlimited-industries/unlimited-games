@@ -5,5 +5,3 @@ Unlimited gamedev is a division of Unlimited Inc. which focuses on game developm
 The document containing the description of the project is located in the `/docs` folder.
 
 ⚠️ At the moment, the site can only be viewed from a laptop and desktop screen.
-
-![Gamepad](public/gamepad.png)
