@@ -1,6 +1,6 @@
-# Unlimited Gamedev
+# Unlimited Games
 
-Unlimited gamedev is a division of Unlimited Inc. which focuses on game development, the study and implementation of new technologies in game development. In particular, we are researching new applications of calculus to create better game mechanics. This project covers the topics of procedural generation, game balance and game AI.
+Unlimited Games is a division of Unlimited Industries. which focuses on game development, the study and implementation of new technologies in game development. In particular, we are researching new applications of calculus to create better game mechanics. This project covers the topics of procedural generation, game balance and game AI.
 
 The document containing the description of the project is located in the `/docs` folder.
 
